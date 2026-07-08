@@ -1,0 +1,15 @@
+/* Simple glass/space style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --glass: rgba(255,255,255,0.05);
+  --saturn: #050816;
+  --accent: #6366f1;
+}
+
+body { background: var(--saturn); color:#fff; font-family: 'Inter',sans-serif; }
+.bg-glass { background: var(--glass); backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.1); border-radius:12px; }
+.btn-primary { padding:.5rem 1rem; background:var(--accent); border-radius:8px; }
+.btn-primary:hover { opacity:.9; }
+a { transition:opacity .2s }
+a:hover { opacity:.8; }
