@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saturn AI Agents</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-saturn text-white font-inter min-h-screen flex flex-col">
+
+  <header class="flex items-center justify-between px-6 py-4 bg-glass">
+    <h1 class="text-2xl font-bold tracking-wide">Saturn&nbsp;USD – AI Agents</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="index.html" class="hover:underline">Swap</a>
+      <a href="lock.html"  class="hover:underline">Locker</a>
+      <a href="markets.html" class="hover:underline">Markets</a>
+      <a href="perps.html" class="hover:underline">Perps</a>
+      <a href="agents.html" class="hover:underline font-semibold">AI&nbsp;Agents</a>
+    </nav>
+  </header>
+
+  <main class="flex-1 p-8">
+    <h2 class="text-xl font-semibold mb-4">Agent Console</h2>
+    <pre id="agentOutput" class="bg-glass p-4 rounded-lg text-sm leading-6"></pre>
+  </main>
+
+  <script type="module">
+    import { runAgents } from './saturn-agents.js';
+    import './saturn-config.js';
+    runAgents();
+  </script>
+</body>
+</html>
