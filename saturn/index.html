@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saturn USD – Swap & Agents</title>
+
+  <!-- Tailwind CDN for quick styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-saturn text-white font-inter min-h-screen flex flex-col">
+
+  <!-- top nav -->
+  <header class="flex items-center justify-between px-6 py-4 bg-glass">
+    <h1 class="text-2xl font-bold tracking-wide">Saturn&nbsp;USD</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="index.html" class="hover:underline">Swap</a>
+      <a href="lock.html"  class="hover:underline">Locker</a>
+      <a href="markets.html" class="hover:underline">Markets</a>
+      <a href="perps.html" class="hover:underline">Perps</a>
+      <a href="agents.html" class="hover:underline">AI&nbsp;Agents</a>
+    </nav>
+    <button id="connectBtn" class="btn-primary">Connect&nbsp;Wallet</button>
+  </header>
+
+  <!-- swapper -->
+  <main id="swapContainer" class="flex-1 flex items-center justify-center p-6">
+    <!-- Jupiter Terminal will inject itself here -->
+  </main>
+
+  <!-- fee notice -->
+  <footer class="text-xs text-center py-4 bg-glass">
+    <p>Protocol fee: 0 bps for now – coming soon.<br>
+       Planned split ⇒ 40% Treasury · 30% Burn · 20% Dev · 10% Reserve
+    </p>
+  </footer>
+
+  <!-- Saturn core scripts -->
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+  <script src="https://terminal.jup.ag/main-v2.js"></script>
+  <script src="saturn-config.js"></script>
+  <script src="saturn-app.js"></script>
+</body>
+</html>
